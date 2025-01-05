@@ -1,0 +1,27 @@
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.splash-logo {
+  display: block;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 10%;
+}
+
+.footer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}

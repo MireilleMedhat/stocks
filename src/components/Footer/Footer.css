@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8px;
+}
