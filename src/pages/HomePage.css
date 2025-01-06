@@ -18,7 +18,7 @@
   background-color: rgba(50, 50, 50, 0.5);
 }
 
-.tableContainer {
+.stocks-container {
   display: flex;
   flex-grow: 1;
   min-height: 0;
