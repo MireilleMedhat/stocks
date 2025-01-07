@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './HomePage.css';
 import SearchBar from '../components/SearchBar/SearchBar';
 import useSearch from '../hooks/useSearch';
@@ -8,11 +8,25 @@ import StocksContainer from '../components/StocksContainer/StocksContainer';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const HomePage = () => {
-  const [searchText, setSearchText] = useState('');
-  const { data: stocks, loading, error, loadMore } = useSearch(searchText);
+  const {
+    setSearchText,
+    results: stocks,
+    loadMore,
+    hasMore,
+    isLoading,
+    error,
+  } = useSearch();
 
   useEffect(() => {
-    if (error) alert(error);
+    if (error) {
+      if ('status' in error) {
+        const errMsg = 'error' in error ? error.error : JSON.stringify(error.data)
+        alert(errMsg);
+
+      } else {
+        alert(error.message);
+      }
+    }
   }, [error]);
 
   return (
@@ -26,11 +40,11 @@ const HomePage = () => {
         <InfiniteScroll
           dataLength={stocks.length}
           next={loadMore}
-          hasMore={!!stocks.length}
+          hasMore={hasMore}
           loader={<Message messageText="Loading more..." />}
           scrollableTarget="scrollable_div"
         >
-          {loading && stocks.length === 0 ? (
+          {isLoading && stocks?.length === 0 ? (
             <Message messageText="Loading...please wait." />
           ) : (
             <StocksContainer stocks={stocks} />
