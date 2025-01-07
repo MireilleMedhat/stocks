@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchBar.css';
 
 type SearchBarProps = {
-  setSearchText: React.Dispatch<React.SetStateAction<string>>;
+  setSearchText: (newSearchText: string) => void;
 };
 
 const SearchBar = ({ setSearchText }: SearchBarProps) => {
