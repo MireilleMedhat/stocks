@@ -3,6 +3,8 @@ import HomePage from './pages/HomePage';
 import './App.css';
 import SplashScreen from './components/SplashScreen/SplashScreen';
 import { useEffect, useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './services/store';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,9 +18,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="background">
-      {isLoading ? <SplashScreen /> : <HomePage />}
-    </div>
+    <Provider store={store}>
+      <div className="background">
+        {isLoading ? <SplashScreen /> : <HomePage />}
+      </div>
+    </Provider>
   );
 };
 
