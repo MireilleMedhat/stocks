@@ -14,11 +14,12 @@
   height: 10%;
 }
 
-.footer {
+.splash-footer {
   font-size: 14px;
   position: absolute;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 h1 {

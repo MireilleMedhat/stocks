@@ -36,20 +36,22 @@ const HomePage = () => {
         <SearchBar setSearchText={setSearchText} />
       </div>
 
-      <div className="stocks-container" id="scrollable_div">
-        <InfiniteScroll
-          dataLength={stocks.length}
-          next={loadMore}
-          hasMore={hasMore}
-          loader={<Message messageText="Loading more..." />}
-          scrollableTarget="scrollable_div"
-        >
-          {isLoading && stocks?.length === 0 ? (
-            <Message messageText="Loading...please wait." />
-          ) : (
-            <StocksContainer stocks={stocks} />
-          )}
-        </InfiniteScroll>
+      <div className="stocks-wrapper">
+        <div className="stocks-container" id="scrollable_div">
+          <InfiniteScroll
+            dataLength={stocks.length}
+            next={loadMore}
+            hasMore={hasMore}
+            loader={<Message messageText="Loading more..." />}
+            scrollableTarget="scrollable_div"
+          >
+            {isLoading && stocks?.length === 0 ? (
+              <Message messageText="Loading...please wait." />
+            ) : (
+              <StocksContainer stocks={stocks} />
+            )}
+          </InfiniteScroll>
+        </div>
       </div>
 
       <Footer resultsCount={stocks.length} />

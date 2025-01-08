@@ -14,6 +14,9 @@
   &::-webkit-scrollbar-thumb:active {
     background-color: rgb(50, 50, 50);
   }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 }
 
 .background {

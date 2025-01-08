@@ -6,7 +6,7 @@ const SplashScreen = () => {
   return (
     <div className="splash-screen">
       <img src="/nasdaq_logo.png" alt="Logo" className="splash-logo" />
-      <footer className="footer">
+      <footer className="splash-footer">
         <p>&copy; {currentDate.getFullYear()} Mireille Medhat</p>
       </footer>
     </div>
