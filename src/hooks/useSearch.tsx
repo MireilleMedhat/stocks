@@ -19,7 +19,7 @@ const useSearch = (initialSearchText = '') => {
       );
       setNextUrlTemp(data.nextUrl);
     }
-  }, [data]);
+  }, [data, nextUrl]);
 
   const triggerSearch = (newSearchText: string) => {
     setSearchText(newSearchText);
