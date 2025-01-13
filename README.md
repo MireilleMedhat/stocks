@@ -36,14 +36,14 @@ Use with caution, as this is a one-way operation.
 
 ## Deployment
 
-- **Web App:** The app is live and ready for demo at [Insert Live Demo Link Here].
-- **Repository:** The code is available at [Insert GitHub Repo Link Here].
+- **Web App:** The app is live and ready for demo at https://stocks-j80m3a87n-mireille-medhats-projects.vercel.app/
+- **Repository:** The code is available at https://github.com/MireilleMedhat/stocks
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/MireilleMedhat/stocks.git
    ```
 2. Install dependencies:
    ```bash
